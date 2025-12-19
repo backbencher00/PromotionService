@@ -1,9 +1,9 @@
 package org.promotionService.service;
 
 import org.promotionService.factory.PromotionFactory;
-import org.promotionService.interfaces.DiscountStrategy;
-import org.promotionService.interfaces.RuleStrategy;
-import org.promotionService.interfaces.RuleTypeStrategy;
+import org.promotionService.strategy.DiscountStrategy;
+import org.promotionService.strategy.RuleStrategy;
+import org.promotionService.strategy.RuleTypeStrategy;
 import org.promotionService.model.PromotionDetail;
 import org.promotionService.model.PromotionRuleDetailVO;
 import org.promotionService.model.PromotionValidCart;
@@ -27,20 +27,23 @@ public class PromotionService {
         return new PromotionValidCart();
     }
 
-    public void setRuleStrategy(RuleStrategy strategy){
+    private void setRuleStrategy(RuleStrategy strategy){
+        System.out.println("........................... setting ruleType strategy : " + strategy.getClass().getName());
+
         this.strategy = strategy;
     }
-    public void setRuleTypeStrategy(RuleTypeStrategy strategy){
-        System.out.println("setting ruleType strategy : " + strategy.getClass().getName());
+    private void setRuleTypeStrategy(RuleTypeStrategy strategy){
+        System.out.println("........................... setting ruleType strategy : " + strategy.getClass().getName());
         this.strategy.setRuleTypeStrategy(strategy);
     }
 
-    public void setDiscountStrategy(DiscountStrategy strategy){
-        System.out.println("setting  discount strategy : " + strategy.getClass().getName());
+    private void setDiscountStrategy(DiscountStrategy strategy){
+        System.out.println("............................ setting  discount strategy : " + strategy.getClass().getName());
         this.strategy.getRuleTypeStrategy().setDiscountStrategy(strategy);
     }
 
-    public Double getDiscount(String promo, Double cartValue, Double discountVal){
+    private Double getDiscount(String promo, Double cartValue, Double discountVal){
+        System.out.println("............................ getting discount for promo: " + promo);
         return this.strategy.getRuleTypeStrategy().getDiscountDiscountStrategy().getDiscount(promo, cartValue, discountVal);
     }
 

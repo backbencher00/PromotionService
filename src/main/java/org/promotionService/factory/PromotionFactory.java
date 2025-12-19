@@ -5,14 +5,14 @@ import org.promotionService.discountStrategy.PercentageDiscount;
 import org.promotionService.enums.DiscountType;
 import org.promotionService.enums.Rule;
 import org.promotionService.enums.RuleType;
-import org.promotionService.interfaces.DiscountStrategy;
-import org.promotionService.interfaces.RuleStrategy;
-import org.promotionService.interfaces.RuleTypeStrategy;
 import org.promotionService.ruleStrategy.CashBackRule;
 import org.promotionService.ruleStrategy.DefaultRule;
 import org.promotionService.ruleStrategy.FreeshippingRule;
 import org.promotionService.ruleStrategy.MerchRule;
 import org.promotionService.ruleTypeStrategy.*;
+import org.promotionService.strategy.DiscountStrategy;
+import org.promotionService.strategy.RuleStrategy;
+import org.promotionService.strategy.RuleTypeStrategy;
 
 public class PromotionFactory {
     public static RuleStrategy getRuleStrategy(Rule rule){

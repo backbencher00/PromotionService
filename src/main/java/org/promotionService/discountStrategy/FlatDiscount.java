@@ -1,6 +1,6 @@
 package org.promotionService.discountStrategy;
 
-import org.promotionService.interfaces.DiscountStrategy;
+import org.promotionService.strategy.DiscountStrategy;
 
 public class FlatDiscount implements DiscountStrategy {
     @Override

@@ -1,7 +1,7 @@
 package org.promotionService.ruleStrategy;
 
-import org.promotionService.interfaces.RuleStrategy;
-import org.promotionService.interfaces.RuleTypeStrategy;
+import org.promotionService.strategy.RuleStrategy;
+import org.promotionService.strategy.RuleTypeStrategy;
 import org.promotionService.ruleTypeStrategy.*;
 
 public class CashBackRule implements RuleStrategy {

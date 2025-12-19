@@ -1,9 +1,8 @@
 package org.promotionService.ruleTypeStrategy;
 
-import org.promotionService.discountStrategy.FlatDiscount;
 import org.promotionService.discountStrategy.PercentageDiscount;
-import org.promotionService.interfaces.DiscountStrategy;
-import org.promotionService.interfaces.RuleTypeStrategy;
+import org.promotionService.strategy.DiscountStrategy;
+import org.promotionService.strategy.RuleTypeStrategy;
 
 public class PercentageRuleType implements RuleTypeStrategy {
     private DiscountStrategy strategy = null;

@@ -1,8 +1,8 @@
 package org.promotionService.ruleTypeStrategy;
 
 import org.promotionService.discountStrategy.FlatDiscount;
-import org.promotionService.interfaces.DiscountStrategy;
-import org.promotionService.interfaces.RuleTypeStrategy;
+import org.promotionService.strategy.DiscountStrategy;
+import org.promotionService.strategy.RuleTypeStrategy;
 
 public class FreeshippingRuleType implements RuleTypeStrategy {
     private DiscountStrategy strategy = null;
