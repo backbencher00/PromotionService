@@ -4,7 +4,11 @@ import org.promotionService.interfaces.DiscountStrategy;
 
 public class PercentageDiscount implements DiscountStrategy {
     @Override
-    public void getDiscount(String promocode) {
-        System.out.println("getting percentageDiscount discount");
+    public Double getDiscount(String promocode, Double cartValue, Double discountVal) {
+        Double totalIllibleDiscount = (cartValue*discountVal)/100;
+        if(totalIllibleDiscount > cartValue){
+            throw new RuntimeException("Invalid promocode : " + promocode);
+        }
+        return totalIllibleDiscount;
     }
 }

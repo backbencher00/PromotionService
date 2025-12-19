@@ -4,7 +4,10 @@ import org.promotionService.interfaces.DiscountStrategy;
 
 public class FlatDiscount implements DiscountStrategy {
     @Override
-    public void getDiscount(String promocode) {
-        System.out.println("getting flat discount");
+    public Double getDiscount(String promocode, Double cartValue, Double discountVal) {
+        if(discountVal > cartValue){
+            throw new RuntimeException("Invalid promocode : " + promocode);
+        }
+        return discountVal;
     }
 }

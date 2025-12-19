@@ -1,5 +1,5 @@
 package org.promotionService.interfaces;
 
 public interface DiscountStrategy {
-    void getDiscount(String promocode);
+    Double getDiscount(String promocode, Double cartValue, Double discountVal);
 }
