@@ -13,6 +13,6 @@ public class Main {
 
     public static void applyPromo(){
         PromotionService promotionService = new PromotionService();
-        promotionService.applyPromo(PromotionRequest.builder().build());
+        promotionService.applyPromo(PromotionRequest.builder().promocode("souorabh").build());
     }
 }
